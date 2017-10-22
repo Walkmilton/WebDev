@@ -1,1 +1,22 @@
-p	{color:#800080;}
+h1{
+  color: white;
+  text-align: center;
+}
+
+p	{
+  color:white;
+  text-align: center;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+body{
+background-image: url("Images/Linlithgow - Background.png");
+background-size: 125%;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+img{
+  align-content: center;
+}
