@@ -7,26 +7,47 @@
   		<meta name="description" content="Linlithgow">
   		<link rel="stylesheet" href="style.css">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 
 	<body>
-		<h1>Linlithgow</h1>
-		<center><img src="Images/Linlithgow-Palace.jpg" alt="Linlithgow Palace" width="512x";height="512px" classs="img-rounded"></center>
-		<p>Linlithgow is a town in West Lothian, Scotland.
-			An ancient town it lies south of its two most prominent landmark: Linlithgow palace and Linlithgow loch, and north of the union canal.
-			Linlithgow’s patron saint is Saint Michael. The motto of Linlithgow is St. Michael is kind to strangers.
-			You can find a statue of the saint holding the coat of arms on the high street. </p>
-		<p> <a href="location.html">Location</a>
-			<a href="history.html">Town History</a>
-			<a href="events.html">Town Events</a>
-		<script src="script.js"></script>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class"navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class"icon-bar"></span>
+						<span class"icon-bar"></span>
+						<span class"icon-bar"></span>
+					</button>
+				</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.html">Linlithgow</a></li>
+							<li><a href="location.html">Location</a></li>
+							<li><a href="history.html">Town History</a></li>
+							<li><a href="events.html">Town Events</a></li>
+						</ul>
+					</div>
+			</div>
+		</nav>
+
+
+		<div class="container bg-1">
+			<h1 class="text-center">Linlithgow</h1>
+			<center><img src="Images/Linlithgow-Palace.jpg" class="img-rounded" alt="Linlithgow Palace" width="512x";height="512px" ></center>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6">
+				<p class="text-center">Linlithgow is a town in West Lothian, Scotland.
+					An ancient town it lies south of its two most prominent landmark: Linlithgow palace and Linlithgow loch, and north of the union canal.
+					Linlithgow’s patron saint is Saint Michael. The motto of Linlithgow is St. Michael is kind to strangers.
+					You can find a statue of the saint holding the coat of arms on the high street. </p>
+			</div>
+			<div class="col-sm-3"></div>
+
 	</body>
 </html>
