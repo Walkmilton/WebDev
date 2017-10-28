@@ -1,14 +1,38 @@
-body{
-background-image: url("Images/Linlithgow - Background.png");
-background-size: 125%;
-background-repeat: no-repeat;
-background-position: center;
+html, body {
+  height: 100%;
 }
 
-bg-1{
+#H1{
   color: white;
+  font-size: 72px;
+  padding-bottom: 10px;
 }
 
-p{
+p {
   color: white;
+
+}
+
+#background {
+  background: url("Images/Linlithgow - Background.png");
+  background-attachment: fixed;
+  background-size: cover;
+  width: auto;
+  height: 100vh;
+  overflow: scroll;
+  overflow-y: visible;
+}
+
+#blurb {
+  padding-top: 65px;
+  font-size: 18px
+}
+
+.col-sm-4 {
+  padding-bottom: 12px
+}
+
+#event {
+  font-size: 32px;
+  padding-top: 115px;
 }
