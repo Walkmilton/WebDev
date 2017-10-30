@@ -25,14 +25,35 @@ p {
 
 #blurb {
   padding-top: 65px;
-  font-size: 18px
+  font-size: 18px;
 }
 
 .col-sm-4 {
-  padding-bottom: 12px
+  padding-bottom: 12px;
+  position: relative;
 }
 
 #event {
   font-size: 32px;
   padding-top: 115px;
+}
+
+#marches {
+  position: relative;
+  z-index: 2;
+}
+
+#jousting {
+  position: relative;
+  z-index: 1;
+}
+
+#gala {
+  position: relative;
+  z-index: 1;
+}
+
+#palace {
+  position: relative;
+  z-index: 1;
 }
