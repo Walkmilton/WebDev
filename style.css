@@ -10,7 +10,7 @@ html, body {
 
 p {
   color: white;
-
+  z-index: 0;
 }
 
 #background {
@@ -25,17 +25,41 @@ p {
 
 #blurb {
   padding-top: 65px;
+  padding-bottom: 65px;
   font-size: 18px;
 }
 
+#text {
+  font-size: 16px;
+}
+
 .col-sm-4 {
-  padding-bottom: 12px;
-  position: relative;
+  padding-bottom: 12px;;
 }
 
 #event {
   font-size: 32px;
   padding-top: 115px;
+}
+
+#marchesText {
+  font-size: 18px;
+  position: absolute;
+}
+
+#palaceText {
+  font-size: 18px;
+  position: absolute;
+}
+
+#galaText {
+  font-size: 18px;
+  position: absolute;
+}
+
+#joustingText {
+  font-size: 18px;
+  position: absolute;
 }
 
 #marches {
@@ -56,4 +80,11 @@ p {
 #palace {
   position: relative;
   z-index: 1;
+}
+
+#map {
+  width: 400px;
+  height: 400px;
+  background-color: grey;
+  padding-bottom: 24px;
 }
