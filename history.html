@@ -10,9 +10,10 @@
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<script src="javascript.js"></script>
 	</head>
 
-	<body>
+	<body onload="startTime()">
 		<div class="container" id="background">
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
@@ -30,6 +31,9 @@
 							<li class="active"><a href="history.html">Town History</a></li>
 							<li><a href="events.html">Town Events</a></li>
 						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><div id="clock"></div></li>
+						</ul>
 					</div>
 			</div>
 		</nav>
@@ -44,11 +48,41 @@
 			<div class="col-sm-6">
 				<p class="text-center" id="blurb">Linlithgow has a deep history and plays a large part in the history of Scotland as a whole.
 					Linlithgow is home to Linlithgow Palace, the birthplace of Mary, Queen of Scots, and James V.
-					Adjacent to the palace is St Michael’s Church, considered one of the most intact medieval buildings in Scotland.</p>
+					Adjacent to the palace is St Michael’s Church, considered one of the most intact medieval buildings in Scotland. Hover the mouse over the pictures below to get some information on them.</p>
 			</div>
 			<div class="col-sm-3"></div>
+		</div>
 
-	  </div>
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6" id="historyImage">
+				<div class="container-fluid" id="townsquare" onmouseover="townsquareInfo()" onmouseout="townsquareImage()">
+					 <center><img src="Images/townsquare.jpg" class="img-thumbnail" alt="Linlithgow Townsquare" width="512px"></center>
+				 </div>
+				</div>
+			<div class="col-sm-3"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6" id="historyImage">
+				<div class="container-fluid" id="church" onmouseover="churchInfo()" onmouseout="churchImage()">
+					<center><img src="Images/church.jpg" class="img-thumbnail" alt="St Michael's Church grounds" width="512px"></center>
+				</div>
+			</div>
+			<div class="col-sm-3"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6" id="historyImage">
+				<div class="container-fluid" id="burntpalace" onmouseover="burntpalaceInfo()" onmouseout="burntpalaceImage()">
+					<center><img src="Images/burntpalace.jpg" class="img-thumbnail" alt="Linlithgow Palace Burning" width="512px"></center>
+				</div>
+			</div>
+			<div class="col-sm-3"></div>
+		</div>
+
   </div>
 	</body>
 

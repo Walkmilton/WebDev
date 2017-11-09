@@ -10,9 +10,12 @@
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+			<script src="javascript.js"></script>
+			<script src=widget.js></script>
 	</head>
 
-	<body>
+	<body onload="startTime()">
 	<div class="container" id="background">
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
@@ -30,9 +33,14 @@
 							<li><a href="history.html">Town History</a></li>
 							<li><a href="events.html">Town Events</a></li>
 						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><div id="clock"></div></li>
+						</ul>
 					</div>
 			</div>
 		</nav>
+
+
 
 
 		<div class="container">
@@ -57,13 +65,8 @@
 
 
 
+		<center><div class="container-fluid" id="weather"></div></center>
 
-		<center><div id="cont_MTEzNjR8MXw0fDV8MXxCN0I3Qjd8MXxGRkZGRkZ8Q3wxfG1waA--">
-			<div id="spa_MTEzNjR8MXw0fDV8MXxCN0I3Qjd8MXxGRkZGRkZ8Q3wxfG1waA--">
-				<a id="a_MTEzNjR8MXw0fDV8MXxCN0I3Qjd8MXxGRkZGRkZ8Q3wxfG1waA--" rel="nofollow"  href="http://www.weather-wherever.co.uk/united-kingdom/linlithgow_v11364/" target="_blank" style="color:#333;text-decoration:none;">Linlithgow Weather forecast</a> © <a href="http://www.weather-wherever.co.uk">weather-wherever.co.uk</a>
-			</div>
-			<script type="text/javascript" src="http://widget.weather-wherever.co.uk/js/MTEzNjR8MXw0fDV8MXxCN0I3Qjd8MXxGRkZGRkZ8Q3wxfG1waA--"></script>
-		</div></center>
 
 
 	</div>

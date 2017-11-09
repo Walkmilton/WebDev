@@ -14,7 +14,7 @@
 			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVKmZKeUKPl5O-WgLduJk2AzU7dnLbLXQ&callback=myMap"></script>
 	</head>
 
-	<body>
+	<body onload="startTime()">
 		<div class="container" id="background">
     <nav class="navbar navbar-inverse">
 			<div class="container-fluid">
@@ -31,6 +31,9 @@
 							<li class="active"><a href="location.html">Location</a></li>
 							<li><a href="history.html">Town History</a></li>
 							<li><a href="events.html">Town Events</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><div id="clock"></div></li>
 						</ul>
 					</div>
 			</div>
