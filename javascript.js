@@ -83,3 +83,36 @@ function burntpalaceImage() {
   parent.removeChild(child);
 
 }
+
+
+function loadToday() {
+  var day = randomNumber();
+  day.toString();
+  day = day + ".txt";
+  getToday(day);
+
+}
+
+
+function randomNumber() {
+  var number = Math.floor(Math.random() * 3) + 1;
+
+  return number;
+
+}
+
+function getToday(file) {
+
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("tilContent").innerHTML = this.responseText;
+      document.getElementById("tilContent").style.color = "white";
+      document.getElementById("tilContent").style.fontSize = "18px";
+      document.getElementById("tilContent").style.paddingTop = "25px";
+    }
+  };
+  xhttp.open("GET", file, true);
+  xhttp.send();
+}
