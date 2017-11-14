@@ -2,6 +2,10 @@
 
     session_start();
 
+    $cookie_name = "enabled?";
+    $cookie_value = "true";
+    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+
 
     $servername = "localhost";
     $usernameDB = "username";
@@ -137,7 +141,14 @@
 			<div class="container-fluid" id="weather"></div>
 		</center>
 
-
+    <?php
+      if(!isset($_COOKIE[$cookie_name])) {
+        echo "Cookie named '" . $cookie_name . "' is not set!";
+      } else {
+        echo "Cookie '" . $cookie_name . "' is set!<br>";
+        echo "Value is: " . $_COOKIE[$cookie_name];
+      }
+     ?>
 
 	</div>
 
