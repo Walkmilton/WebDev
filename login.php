@@ -6,6 +6,13 @@
       header("Location:welcome.php");
     }
 
+    function test_input($data) {
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
+    }
+
     $servername = "localhost";
     $usernameDB = "username";
     $passwordDB = "password";
@@ -23,8 +30,8 @@
       die("Connection failed: " . $conn->connect_error);
     }
 
-    $username = $_POST['loginUsername'];
-    $password = $_POST['loginPwd'];
+    $username = test_input($_POST['loginUsername']);
+    $password = test_input($_POST['loginPwd']);
 
     if(isset($_POST['login'])) {
 
@@ -41,9 +48,9 @@
       }
     }
 
-    $newUsername = $_POST['sign-upUsername'];
-    $newPassword1 = $_POST['sign-upPwd'];
-    $newPassword2 = $_POST['sign-upPwd2'];
+    $newUsername = test_input($_POST['sign-upUsername']);
+    $newPassword1 = test_input($_POST['sign-upPwd']);
+    $newPassword2 = test_input($_POST['sign-upPwd2']);
 
     if(isset($_POST['sign-up'])) {
 
@@ -101,7 +108,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Linlithgow</a></li>
+            <li><a href="index.php">Linlithgow</a></li>
             <li><a href="location.html">Location</a></li>
             <li><a href="history.html">Town History</a></li>
             <li><a href="events.html">Town Events</a></li>

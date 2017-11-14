@@ -111,6 +111,7 @@ function getToday(file) {
       document.getElementById("tilContent").style.color = "white";
       document.getElementById("tilContent").style.fontSize = "18px";
       document.getElementById("tilContent").style.paddingTop = "25px";
+      document.getElementById("tilContent").style.paddingBottom = "25px";
     }
   };
   xhttp.open("GET", file, true);
