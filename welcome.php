@@ -1,3 +1,12 @@
+<?php
+// Start the session
+session_start();
+
+if(!isset($_SESSION['username'])){
+  header("Location:login.php");
+  }
+?>
+
 <!doctype html>
 
 <html lang="en">
@@ -16,11 +25,66 @@
 
 
 <body onload="startTime()">
+  <div class="container" id="background">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class "navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Linlithgow</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="history.html">Town History</a></li>
+            <li><a href="events.html">Town Events</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="welcome.php"><span class="glyphicon glyphicon-user"></span> User Page</a></li>
+            <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li>
+              <div id="clock"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-Welcome <?php echo $_POST["loginUsername"]; ?><br>
-Your email address is: <?php echo $_POST["email"]; ?>
 
 
+    <div class="container-fluid">
+      <h2 id="H2" class="text-center">User Page</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-4"></div>
+      <div class="col-xs-4">
+        <div class="container-fluid">
+          <h3 id="welcome" class="text-center">Welcome <?php echo $_SESSION["username"];?></h3>
+        </div>
+      </div>
+      <div class="col-xs-4"></div>
+    </div>
+
+    <form action="script.php">
+      <div class="row">
+        <div class="col-xs-4"></div>
+        <div class="col-xs-4">
+          <div class="container-fluid">
+              <button type="submit" class="btn btn-danger btn-block">Logout</button>
+          </div>
+        </div>
+        <div class="col-xs-4"></div>
+      </div>
+    </form>
+
+
+
+
+</div>
 </body>
 
 </html>

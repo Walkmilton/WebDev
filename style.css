@@ -12,9 +12,17 @@ html, body {
   color: white;
 }
 
+#welcome {
+  color: white;
+}
+
 p {
   color: white;
   z-index: 0;
+}
+
+#warning {
+  color: red;
 }
 
 #background {
