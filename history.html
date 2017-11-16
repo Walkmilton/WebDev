@@ -1,90 +1,94 @@
 <!doctype html>
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-  		<title>Linithgow's History</title>
-  		<meta name="description" content="Linlithgow's history">
-			<link rel="stylesheet" href="style.css">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-			<script src="javascript.js"></script>
-	</head>
 
-	<body onload="startTime()">
+<head>
+	<meta charset="utf-8">
+	<title>Linithgow's History</title>
+	<meta name="description" content="Linlithgow's history">
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="javascript.js"></script>
+</head>
+
+<body onload="startTime()">
+	<div class="container" id="background">
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
-				<div class"navbar-header">
+				<div class "navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
 				</div>
-					<div class="collapse navbar-collapse" id="myNavbar">
-						<ul class="nav navbar-nav">
-							<li><a href="index.php">Linlithgow</a></li>
-							<li><a href="location.html">Location</a></li>
-							<li class="active"><a href="history.html">Town History</a></li>
-							<li><a href="events.html">Town Events</a></li>
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li><a href="welcome.php"><span class="glyphicon glyphicon-user"></span> User Page</a></li>
-							<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-							<li><div id="clock"></div></li>
-						</ul>
-					</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="index.php">Linlithgow</a></li>
+						<li><a href="location.html">Location</a></li>
+						<li class="active"><a href="history.html">Town History</a></li>
+						<li><a href="events.html">Town Events</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="welcome.php"><span class="glyphicon glyphicon-user"></span> User Page</a></li>
+						<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+						<li>
+							<div id="clock"></div>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 
-		<div class="container">
-			<h1 class="text-center" id="H1">History</h1>
-			<center><img src="Images/Linlithgow-Historical-1.jpg" class="img-circle" alt="Linlithgow Palace" width="512x";height="512px"></center>
-		</div>
-
-		<div class="row">
-			<div class="col-sm-3"></div>
-			<div class="col-sm-6">
-				<p class="text-center" id="blurb">Linlithgow has a deep history and plays a large part in the history of Scotland as a whole.
-					Linlithgow is home to Linlithgow Palace, the birthplace of Mary, Queen of Scots, and James V.
-					Adjacent to the palace is St Michael’s Church, considered one of the most intact medieval buildings in Scotland. Hover the mouse over the pictures below to get some information on them.</p>
+			<div class="container">
+				<h1 class="text-center" id="H1">History</h1>
+				<center><img src="Images/Linlithgow-Historical-1.jpg" class="img-circle" alt="Linlithgow Palace" width="512x" ;height="512px"></center>
 			</div>
-			<div class="col-sm-3"></div>
-		</div>
 
-		<div class="row">
-			<div class="col-sm-3"></div>
-			<div class="col-sm-6" id="historyImage">
-				<div class="container-fluid" id="townsquare" onmouseover="townsquareInfo()" onmouseout="townsquareImage()">
-					 <center><img src="Images/townsquare.jpg" class="img-thumbnail" alt="Linlithgow Townsquare" width="512px"></center>
-				 </div>
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<p class="text-center" id="blurb">Linlithgow has a deep history and plays a large part in the history of Scotland as a whole. Linlithgow is home to Linlithgow Palace, the birthplace of Mary, Queen of Scots, and James V. Adjacent to the palace is St Michael’s Church, considered one
+						of the most intact medieval buildings in Scotland. Hover the mouse over the pictures below to get some information on them.</p>
 				</div>
-			<div class="col-sm-3"></div>
-		</div>
-
-		<div class="row">
-			<div class="col-sm-3"></div>
-			<div class="col-sm-6" id="historyImage">
-				<div class="container-fluid" id="church" onmouseover="churchInfo()" onmouseout="churchImage()">
-					<center><img src="Images/church.jpg" class="img-thumbnail" alt="St Michael's Church grounds" width="512px"></center>
-				</div>
+				<div class="col-sm-3"></div>
 			</div>
-			<div class="col-sm-3"></div>
-		</div>
 
-		<div class="row">
-			<div class="col-sm-3"></div>
-			<div class="col-sm-6" id="historyImage">
-				<div class="container-fluid" id="burntpalace" onmouseover="burntpalaceInfo()" onmouseout="burntpalaceImage()">
-					<center><img src="Images/burntpalace.jpg" class="img-thumbnail" alt="Linlithgow Palace Burning" width="512px"></center>
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6" id="historyImage">
+					<div class="container-fluid" id="townsquare" onmouseover="townsquareInfo()" onmouseout="townsquareImage()">
+						<center><img src="Images/townsquare.jpg" class="img-thumbnail" alt="Linlithgow Townsquare" width="512px"></center>
+					</div>
 				</div>
+				<div class="col-sm-3"></div>
 			</div>
-			<div class="col-sm-3"></div>
-		</div>
 
-  </div>
-	</body>
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6" id="historyImage">
+					<div class="container-fluid" id="church" onmouseover="churchInfo()" onmouseout="churchImage()">
+						<center><img src="Images/church.jpg" class="img-thumbnail" alt="St Michael's Church grounds" width="512px"></center>
+					</div>
+				</div>
+				<div class="col-sm-3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6" id="historyImage">
+					<div class="container-fluid" id="burntpalace" onmouseover="burntpalaceInfo()" onmouseout="burntpalaceImage()">
+						<center><img src="Images/burntpalace.jpg" class="img-thumbnail" alt="Linlithgow Palace Burning" width="512px"></center>
+					</div>
+				</div>
+				<div class="col-sm-3"></div>
+			</div>
+
+
+		</div>
+</body>
 
 </html>
