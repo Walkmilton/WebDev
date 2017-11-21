@@ -33,6 +33,8 @@
     $username = test_input($_POST['loginUsername']);
     $password = test_input($_POST['loginPwd']);
 
+  
+
     if(isset($_POST['login'])) {
 
       $sqlCheck = "SELECT * FROM `users` WHERE Username='$username' AND Password='$password'";

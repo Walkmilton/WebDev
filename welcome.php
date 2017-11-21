@@ -145,15 +145,15 @@ if(isset($_POST['Delete'])) {
     </div>
 
     <div class="row">
-      <div class="col-xs-4"></div>
-      <div class="col-xs-4">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
         <div class="container-fluid">
           <h3 id="welcome" class="text-center">Welcome <?php echo $_SESSION["username"];?></h3>
 
           <p class="text-center">Below you can add places to the table on the homepage</p>
         </div>
       </div>
-      <div class="col-xs-4"></div>
+      <div class="col-sm-4"></div>
     </div>
 
 
@@ -161,47 +161,47 @@ if(isset($_POST['Delete'])) {
     <!--Adding stuff to database-->
     <form class="form-horizontal" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <div class="form-group">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
           <input type="text" class="form-control" name="name" placeholder="Please Enter the Name of the place" required>
         </div>
-        <div class="col-xs-2"></div>
+        <div class="col-sm-2"></div>
       </div>
 
       <div class="form-group">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
           <input type="text" class="form-control" name="type" placeholder="Please Enter the Type of the Place" required>
         </div>
-        <div class="col-xs-2"></div>
+        <div class="col-sm-2"></div>
       </div>
 
       <div class="form-group">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
           <input type="text" class="form-control" name="location" placeholder="Please Enter the location of the Place" required>
         </div>
-        <div class="col-xs-2"></div>
+        <div class="col-sm-2"></div>
       </div>
 
       <div class="form-group">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
           <input type="text" class="form-control" name="stars" placeholder="Please Enter the amount of stars for the Place" required>
         </div>
-        <div class="col-xs-2"></div>
+        <div class="col-sm-2"></div>
       </div>
 
       <div class="form-group">
-        <div class="col-xs-offset-2 col-xs-10">
+        <div class="col-sm-offset-2 col-sm-10">
           <button type="submit" class="btn btn-default" name="submit">Add</button>
         </div>
       </div>
     </form>
 
     <div class="row">
-      <div class="col-xs-4"></div>
-      <div class="col-xs-4">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
         <div class="container-fluid">
           <?php
           if(isset($_POST['submit'])) {
@@ -214,73 +214,73 @@ if(isset($_POST['Delete'])) {
           ?>
         </div>
       </div>
-      <div class="col-xs-4"></div>
+      <div class="col-sm-4"></div>
     </div>
 
 
 <!--Editing the database-->
 <div class="row">
-  <div class="col-xs-4"></div>
-  <div class="col-xs-4">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
     <div class="container-fluid">
       <p class="text-center">Below you can edit the table on the homepage. Search for an entry by name, and then enter the new data.</p>
     </div>
   </div>
-  <div class="col-xs-4"></div>
+  <div class="col-sm-4"></div>
 </div>
 
 
     <form class="form-horizontal" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <div class="form-group">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
           <input type="text" class="form-control" name="editSearch" placeholder="Please Enter the Name of the place you wish to edit" required>
         </div>
-        <div class="col-xs-2"></div>
+        <div class="col-sm-2"></div>
       </div>
 
       <div class="form-group">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
           <input type="text" class="form-control" name="editName" placeholder="Please Enter the New Name of the Place" required>
         </div>
-        <div class="col-xs-2"></div>
+        <div class="col-sm-2"></div>
       </div>
 
       <div class="form-group">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
           <input type="text" class="form-control" name="editType" placeholder="Please Enter the New Type of the Place" required>
         </div>
-        <div class="col-xs-2"></div>
+        <div class="col-sm-2"></div>
       </div>
 
       <div class="form-group">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
           <input type="text" class="form-control" name="editLocation" placeholder="Please Enter the New location of the Place" required>
         </div>
-        <div class="col-xs-2"></div>
+        <div class="col-sm-2"></div>
       </div>
 
       <div class="form-group">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
           <input type="text" class="form-control" name="editStars" placeholder="Please Enter the new amount of stars for the Place" required>
         </div>
-        <div class="col-xs-2"></div>
+        <div class="col-sm-2"></div>
       </div>
 
       <div class="form-group">
-        <div class="col-xs-offset-2 col-xs-10">
+        <div class="col-sm-offset-2 col-sm-10">
           <button type="submit" class="btn btn-default" name="Search">Edit</button>
         </div>
       </div>
     </form>
 
     <div class="row">
-      <div class="col-xs-4"></div>
-      <div class="col-xs-4">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
         <div class="container-fluid">
           <?php
           if(isset($_POST['Search'])) {
@@ -293,41 +293,41 @@ if(isset($_POST['Delete'])) {
           ?>
         </div>
       </div>
-      <div class="col-xs-4"></div>
+      <div class="col-sm-4"></div>
     </div>
 
 
 <!--Deleting from the database-->
 <div class="row">
-  <div class="col-xs-4"></div>
-  <div class="col-xs-4">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
     <div class="container-fluid">
       <p class="text-center">Below you can edit the table on the homepage. Search for an entry by name, and then hit delete to delete that entry.</p>
     </div>
   </div>
-  <div class="col-xs-4"></div>
+  <div class="col-sm-4"></div>
 </div>
 
 
     <form class="form-horizontal" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <div class="form-group">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
           <input type="text" class="form-control" name="delete" placeholder="Please Enter the Name of the place you wish to delete" required>
         </div>
-        <div class="col-xs-2"></div>
+        <div class="col-sm-2"></div>
       </div>
 
       <div class="form-group">
-        <div class="col-xs-offset-2 col-xs-10">
+        <div class="col-sm-offset-2 col-sm-10">
           <button type="submit" class="btn btn-default" name="Delete">Delete</button>
         </div>
       </div>
     </form>
 
     <div class="row">
-      <div class="col-xs-4"></div>
-      <div class="col-xs-4">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
         <div class="container-fluid">
           <?php
           if(isset($_POST['Delete'])) {
@@ -340,20 +340,19 @@ if(isset($_POST['Delete'])) {
           ?>
         </div>
       </div>
-      <div class="col-xs-4"></div>
+      <div class="col-sm-4"></div>
     </div>
-
 
 <!--logout button-->
     <form action="script.php">
       <div class="row" id="bottom">
-        <div class="col-xs-4"></div>
-        <div class="col-xs-4">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
           <div class="container-fluid" id='bottom'>
               <button type="submit" class="btn btn-danger btn-block">Logout</button>
           </div>
         </div>
-        <div class="col-xs-4"></div>
+        <div class="col-sm-4"></div>
       </div>
     </form>
 

@@ -88,16 +88,22 @@
 %% -- Page Functionality -- %%
 	\section{Page Functionality}
 		\subsection{Index}
+		The index page has several features. The navaigation bar at the top of the page allows the user to go to any page on the website. The navigation bar is dynamic, as it will change to a drop down menu if the viewport is small enough. There is a button that will display an event that is on in Linlithgow. Once clicked the information is displayed below the button. Below this, there is a bootstrap table, that will highlight the row that the mouse hovers over. This table contains information from an online sql database, that can be edited and updated with administrative credentials on the user page. At the bottom of the page there is a weather widget. This will change depending on the weather of Linlithgow.
 
 		\subsection{Location}
+		The location page contains a map plugin to show the location of linlithgow on a map. The plugin connects to a google maps api and displays the location. As with every page, the location page has a navbar, with the location section showing as the active page.
 
 		\subsection{Town History}
+		The town history page contains three images of historical events that have occurred in linlithgow. When the user hovers the mouse over one of these images, a description of the image appears underneath. The town history page also contains the navbar, with the town history section showing as the active page.
 
 		\subsection{Town Events}
+		The town events page shows various pictures of events that happen throughout the year in linlithgow. The user can click on an image and reveal more information about the event. When the viewport is too small for the bootstrap grid system the page uses, the items stack verticallty, however, due to the alternating layout of the page, the images and titles stack in an inconsistent layout. As with other pages, the events page has a nav bar with the town events section marked as active.
 
 		\subsection{Login Page}
+		The login page has two bootstrap forms. These forms span the length of the 'content space', and if the viewport is adjusted then the forms adapt to the size of the viewport. The login page also has a navbar, however it does not display as active on the navbar. This is an intentional choice as the login page, in terms of user experience, is not considered an active page, as the user will only be on it momentarily, whilst they create a new account, or login. When the user logs in a session is created and their username is stored. If the user clicks the button  to login, but is already logged in, then the login page will be bypassed and the user will be redirected to the user page.
 
 		\subsection{User Page}
+		The user page will display the users name by reading the session variable that was created when the user logged in. There are three bootstrap forms that will adapt if the viewport is adjusted. On this page the user can input data into the first form to add something to the table on the index page, and on the second form they can search for something by the name of the place, and then in the following fields add data that will update that item in the table. In the third form the user can enter the name of an item and it will be deleted. However if the user is logged in with anything other than the administrator account, they will be shown a bootstrap alert that informs them that they do not have sufficient permissions to edit the table. If the user tries to go to this page when  they are not logged in they will be redirected to the login page.
 
 	\clearpage
 
@@ -137,6 +143,7 @@
 		On the welcome page, accessible once the user has logged in, there are several bootstrap forms. The user can add items to the table on the index page, they can edit items in the table, or they can remove items in the table.
 
 		\subsection{Appropriate consideration of security measures}
+		On the login and welcome page, all data is sent via the post method, so that no data can be seen in the url. Whenever data is sent, a function is used to make sure the data will not cause any cross-side scripting. The function trims the data of any spaces at the front and end, and then it removes any slashes so that there is no danger that the data entered could be a link. Finally the data converts all html special characters into strings so that no user could enter a script tag.
 
 	\clearpage
 
@@ -144,9 +151,15 @@
 %% -- Security -- %%
 	\section{Security}
 		\subsection{Risks}
+		Web applications can suffer many risks if not considered in the development process. The Open Web Application Security Project releases the OWASP top ten, a consensus about the most critical security risks to web applications. Some of these include SQL injection, cross side scripting, and sensitive data exposure. All of which the Linlithgow website will be vulnerable to unless considered during development. As the website uses forms to connect to an sql database, the website is vulnerable to cross side scripting and sql injections. Because the website also uses an sql database, it is vulnerable to sensitive data exposure. The linlithgow wesbite does not hash passwords before sending them to the database. This is a large security risk as the passwords are stored in plain text in the database, meaning that if the database was compromised, then all accounts would immediatly also be compromised. This was not an oversight, as because the website was never intended to be released commercially, the need to protect users accounts was not needed. Also, because the website does not use https, any data sent to the server is at risk, and so modern browsers will warn the user that the connection is insecure. Another reason behind not hashing passwords that was considered, is that the admin account can only edit the "places of interest" database, and so all that is effected is the index page. There is no major damadge that can be done. The linlithgow website does also not use sql prepared statements, for the samre reasons as stated before.
 
 		\subsection{Mitigations}
+		During the development of the website, several mitigations were put in place to make the website more secure. Cross side scripting and sql injections are prevented as any input from the user is passed to a function that will strip the spaces, slashes, and html characters. This minimises the risk from the affore mentioned threats.
 
+	\clearpage
+
+	\section{Future Work}
+	The linlithgow website as it stands can still undergo a lot of work. The primary concern is the lack of security in certain areas of the website. Even although, as stated earlier, there were decisions made to overlook password hashing and sql prepared statements, these would be immplimented in future releases of the website, to ensure maximum security for the user. Following the securing of the web application, some additional user features would be added. Currently, when the user logs in, they cannot do anything different on the website that they could do as a guest. A future implimentation would be to allow the user to chose their favourite item from the "places of interest" database, and the website would remember this choice, by adding it to a field in the user database. 
 
 	\clearpage
 

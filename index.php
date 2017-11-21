@@ -99,9 +99,9 @@
 
 
 
-		<div class="container">
+		<div class="container-fluid">
 			<h1 class="text-center" id="H1">Linlithgow</h1>
-			<center><img src="Images/Linlithgow-Palace.jpg" class="img-circle" alt="Linlithgow Palace" width="512x" ;height="512px"></center>
+			<center><img src="Images/Linlithgow-Palace.jpg" class="img-circle" alt="Linlithgow Palace" width="512px"></center>
 		</div>
 
 
@@ -129,8 +129,8 @@
 		</div>
 
 		<div class="row">
-			<div class="col-xs-3"></div>
-			<div class="col-xs-6">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6">
 				<div class="container-fluid">
 					<p id="tableIntro" class="text-center">Here are some places of interest in Linlithgow</p>
 					<table class="table table-hover table-responsive" id="poi">
@@ -154,7 +154,7 @@
 					</table>
 				</div>
 			</div>
-			<div class="col-xs-3"></div>
+			<div class="col-sm-3"></div>
 		</div>
 
 
@@ -162,6 +162,7 @@
 			<div class="container-fluid" id="weather"></div>
 		</center>
 
+<div class="container-fluid">
     <?php
       if(!isset($_COOKIE[$cookie_name])) {
         echo "Cookie named '" . $cookie_name . "' is not set!";
@@ -170,6 +171,7 @@
         echo "Value is: " . $_COOKIE[$cookie_name];
       }
      ?>
+   </div>
 
 	</div>
 
