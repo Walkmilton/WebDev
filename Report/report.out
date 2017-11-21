@@ -1,0 +1,31 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Page Design}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Index}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Location}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Town History}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Town Events}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Login Page}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.6}{User Page}{section.2}% 8
+\BOOKMARK [1][-]{section.3}{Page Functionality}{}% 9
+\BOOKMARK [2][-]{subsection.3.1}{Index}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.2}{Location}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.3}{Town History}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.4}{Town Events}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.5}{Login Page}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.6}{User Page}{section.3}% 15
+\BOOKMARK [1][-]{section.4}{Coursework Brief}{}% 16
+\BOOKMARK [2][-]{subsection.4.1}{Clear use of HTML 5}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.2}{Use of Bootstrap}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.3}{Use of Javascript to manipulate the DOM based on an event}{section.4}% 19
+\BOOKMARK [2][-]{subsection.4.4}{Javascript loading dynamically changing information}{section.4}% 20
+\BOOKMARK [2][-]{subsection.4.5}{Use of jQuery in conjunction with the DOM}{section.4}% 21
+\BOOKMARK [2][-]{subsection.4.6}{Use of a jQuery plugin}{section.4}% 22
+\BOOKMARK [2][-]{subsection.4.7}{Use of the jQuery AJAX function}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.8}{Use of Cookies}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.9}{User login functionality}{section.4}% 25
+\BOOKMARK [2][-]{subsection.4.10}{Admin section of the website}{section.4}% 26
+\BOOKMARK [2][-]{subsection.4.11}{Ability to add, edit and delete information from a database}{section.4}% 27
+\BOOKMARK [2][-]{subsection.4.12}{Appropriate consideration of security measures}{section.4}% 28
+\BOOKMARK [1][-]{section.5}{Security}{}% 29
+\BOOKMARK [2][-]{subsection.5.1}{Risks}{section.5}% 30
+\BOOKMARK [2][-]{subsection.5.2}{Mitigations}{section.5}% 31

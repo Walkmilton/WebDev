@@ -35,6 +35,10 @@ p {
   overflow-y: visible;
 }
 
+#cookie {
+  color: black;
+}
+
 #clock {
   padding-top: 16px;
 }
@@ -59,7 +63,6 @@ p {
 
 .col-sm-4 {
   padding-bottom: 12px;
-  ;
 }
 
 #tableIntro {
@@ -73,7 +76,7 @@ p {
 
 #event {
   font-size: 32px;
-  padding-top: 115px;
+  padding-top: 18%;
 }
 
 #marchesText {

@@ -1,0 +1,161 @@
+\documentclass[12pt,a4paper]{article}
+
+%% -- Packages to use -- %%
+	\usepackage{authblk}
+	\usepackage{graphicx}
+	\usepackage[toc,page]{appendix}
+	\usepackage{hyperref}
+	\usepackage[backend=bibtex, style=authoryear]{biblatex}
+	\makeatletter
+	\def\blx@maxline{77}
+	\makeatother
+	\usepackage[nottoc,numbib]{tocbibind}
+%% -- Define path to .bib file -- %%
+	\bibliography{example}
+	\usepackage{float}
+	\usepackage{listings}
+	\usepackage{enumitem}
+
+%% -- Generate the glossary -- %%
+	\usepackage[acronym,nomain,nonumberlist]{glossaries}
+	\makeglossaries
+
+%% -- Acronym definitions {label}{abbreviation}{full} -- %%
+
+
+
+%% -- Set Title and Author Details -- %%
+	\title{Dynamic Web Development 1 Report}
+	\author{Declan Doyle}
+	\affil{BSc Ethical Hacking\\
+		Abertay University\\
+		Dundee, United Kingdom\\
+		1600219@abertay.ac.uk}
+	\date{November 18, 2017}
+
+%% -- Beginning the main document -- %%
+\begin{document}
+
+%% -- For the title, abstract and table of contents use single column -- %%
+	\pagenumbering{gobble}
+
+%% -- Add the uni logo -- %%
+	\begin{figure}
+		\includegraphics[width=\linewidth]{img/Unilogo}
+	\end{figure}
+
+
+%% -- Insert the title here -- %%
+	\maketitle
+
+	\page
+
+
+%% -- Table Of Contents -- %%
+	\newpage
+	\tableofcontents
+	\newpage
+
+%% -- Start Page Numbers -- %%
+%% -- arabic = 1,2,3 -- %%
+
+	\pagenumbering{arabic}
+
+%% -- Introduction -- %%
+	\section{Introduction}
+		This report will look at a website created on the town "Linlithgow". The design of each page of the website will be evaluated, considering consistency, accessability, userfriendliness and responsive design.
+		Page functionality will also be considered: static and dynamic content will be explored, along with user interaction and usability.
+		The coursework brief will then be considered, and each aspect will reviewed to determine whether the website adheres to each point of the brief.
+		Finally, the website's security will be considered. The risks of a website will be investigated and the websites mitigations will be reviewed.
+
+	\clearpage
+%% -- Page Design -- %%
+	\section{Page Design}
+		\subsection{Index}
+
+		\subsection{Location}
+
+		\subsection{Town History}
+
+		\subsection{Town Events}
+
+		\subsection{Login Page}
+
+		\subsection{User Page}
+
+	\clearpage
+
+%% -- Page Functionality -- %%
+	\section{Page Functionality}
+		\subsection{Index}
+
+		\subsection{Location}
+
+		\subsection{Town History}
+
+		\subsection{Town Events}
+
+		\subsection{Login Page}
+
+		\subsection{User Page}
+
+	\clearpage
+
+%% -- Coursework Brief -- %%
+	\section{Coursework Brief}
+		\subsection{Clear use of HTML 5}
+		The website makes good use of HTML 5 by using various HTML tags. Headings are used at the start of each page, and sub headings are used for certain sections. Paragraphs are used for sections of text, and data about each page is put in the head section.
+
+		\subsection{Use of Bootstrap}
+		The Linlitgow website makes extensive use of bootstrap. Each page uses a bootstrap navigation bar for clear navigation to each page. Each page also uses a bootstrap grid to provide a consistent layout across each page. Any piece of content is stored in a bootstrap div, in order to compartmentalise the content of the website. There is a bootstrap table on the index page, and bootstrap forms on the login and user pages. All images used have bootstrap classes, so they are either rounded, or use the thumbnail class. There are also several bootstrap buttons on various pages. There is also a bootstrap alert on the welcome page that displays if the user does not have sufficient permissions and alerts them of this.
+
+		\subsection{Use of Javascript to manipulate the DOM based on an event}
+		On the town history page, there are three images of historical events in Linlithgow. When the mouse hovers over one of these pictures, a small description of the image appears underneath. A javascript function is called when the mouse hovers over the image which adds a new paragraph element to the DOM. When the mouse leaves the image, the child element - the paragraph - is removed from the parent element - the div.
+
+		\subsection{Javascript loading dynamically changing information}
+		On every page inside the nav bar there is a clock of the current time at the users locatation. On each page load a javascript function is called that gets the currrent time and edits the inner html of the nav bar.
+
+		\subsection{Use of jQuery in conjunction with the DOM}
+		On the events page, there is a bootstrap grid that alternates between pictures on one side and text on the other. When the user clicks on the image, it moves across to cover the title, to reveal a description of each event underneath. The page has a jQuery file included that hides all the text underneath the images, incase there is any overlap. It then, when an image is clicked on, animates the image moveing over towards the title text, and if it is already on the title, it animates a move back.
+
+		\subsection{Use of a jQuery plugin}
+		On the index page, at the bottom of the page, there is a jQuery plugin. A plugin called simple weather is used to get the weather information for Linlithgow. It retrieves the weather information and then prints it to the html of the page. There is also a custom font installed through CSS to display weather icons next to the text on  the main page.
+
+		\subsection{Use of the jQuery AJAX function}
+		On the index page there is a button that when clicked will display an event that is occuring in Linlithgow. AJAX is used to load in a text file containing the information. When the button is clicked a javascript function is called that generates a random number between one and three. It converts that number to a string and adds '.txt' to the end of the string. This is passed to another javascript function that creates an xmlhttp request, getting one of three text files, depending on  the number passed by the previous function. The html of the page is edited and the content of the file is added to a div.
+
+		\subsection{Use of Cookies}
+		The website uses a cookie to store the value true if the user accepts that the website uses cookies. There is a bootstrap modal at the load of the index page alerting the user that the website uses cookies, in order to comply with the cookie law.
+
+		\subsection{User login functionality}
+		The website has a login page that makes use of php and mySQL. There is a username and password field within a bootstrap form that checks an sql database to verify that the information the user has enetered is correct, and if it is then the user logged in. The page will display an error if the user does not have the correct credentials.
+
+		\subsection{Admin section of the website}
+		When the user logs on, they are directed to the login page. They can attempt to add, edit or delete information however if they are not logged in as the admin account, they will get a boostrap alert saying they do not have sufficient permissions to edit the database.
+
+		\subsection{Ability to add, edit and delete information from a database}
+		On the welcome page, accessible once the user has logged in, there are several bootstrap forms. The user can add items to the table on the index page, they can edit items in the table, or they can remove items in the table.
+
+		\subsection{Appropriate consideration of security measures}
+
+	\clearpage
+
+
+%% -- Security -- %%
+	\section{Security}
+		\subsection{Risks}
+
+		\subsection{Mitigations}
+
+
+	\clearpage
+
+
+
+
+
+
+%% -- END OF DOCUMENT -- %%
+\end{document}
+
+											%% - 0 - %%

@@ -44,6 +44,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
 	<script src="javascript.js"></script>
 	<script src=widget.js></script>
+  <script src="cookies.js"></script>
 </head>
 
 <body onload="startTime()">
@@ -75,6 +76,26 @@
 			</div>
 		</nav>
 
+    <!-- Modal -->
+    <div id="cookieAlert" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Alert</h4>
+          </div>
+          <div class="modal-body">
+            <h6 id="cookie">This website uses cookies. Do you agree to letting this website continue to use cookies?</h6>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">I agree</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
 
 
