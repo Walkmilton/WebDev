@@ -72,16 +72,19 @@
 %% -- Page Design -- %%
 	\section{Page Design}
 		\subsection{Index}
+		The index page follows a fairly simple design. All of the content if put into a centre area and the sides of the website are left empty. The background image is fixed and so when scrolling on the website, the image stays the same. However when the page is viewed on a mobile device or a device with a small viewport, the image below the title text does not scale well to that small a size, but the rest of the webpage does. In terms of accisibility, the index page has no difficult to read text, apart from the table, but this has a hover feature so when the user hovers the mouse over an item in the table, it will highlight the item and the background will become white, making the text more readable.
 
 		\subsection{Location}
+		The location page follows the same design as the index page. A content area in the middle of the page, and two vertical empty spaces at each side. The background image is also the same as the index page. This page also suffers from the same effect as the index page, where when viewed on a mobile device with a small viewport, the image does not scale well. The map on this page would perhaps be more suitable design-wise if there was a border around it, as the green colour on the map can sometimes clash with the green in the background.
 
 		\subsection{Town History}
+		The town history page has the same design and backrgound as the previous pages, and has the same issues on a mobile screen. The page has three images in a vertical layout, that, when the mouse hovers over them, text appears underneath.
 
 		\subsection{Town Events}
+		The town events page also has the same design and background as the previous pages, and the same issues on a mobile screeen. The events page has a slightly different design, as it has a two by two layout rather than all the content being in a vertical line. There are alternating headings and pictures, and when the pictures are clicked on, text is revealed about the event. When this is viewed on a small viewport, the images will disappear to either the left or the right, and the user will have to scroll to the side in order to click them and get them to move back.
 
-		\subsection{Login Page}
-
-		\subsection{User Page}
+		\subsection{Login Page & User Page}
+		Both the login and user page have the same design and background as the rest of the pages. As there is no header image on either of these pages, they do not suffer the same problems that the previous pages do on a mobile device. The Login and user page have several bootstrap forms, that span the width of the middle grid they are in. If the viewport is small then the forms span the width of the page. These pages are the most suitable for mobile viewing as the user experience on these pages does not change when being viewed on a mobile device.
 
 	\clearpage
 
@@ -137,13 +140,13 @@
 		The website has a login page that makes use of php and mySQL. There is a username and password field within a bootstrap form that checks an sql database to verify that the information the user has enetered is correct, and if it is then the user logged in. The page will display an error if the user does not have the correct credentials.
 
 		\subsection{Admin section of the website}
-		When the user logs on, they are directed to the login page. They can attempt to add, edit or delete information however if they are not logged in as the admin account, they will get a boostrap alert saying they do not have sufficient permissions to edit the database.
+		When the user logs on, they are directed to the login page. They can attempt to add, edit or delete information however if they are not logged in as the admin account, they will get a boostrap alert saying they do not have sufficient permissions to edit the database. This was implimented because of the functionality a user account has, as they cannot do anything a guest account can, so rather than the user not have a page themselves, there is an alert box instead.
 
 		\subsection{Ability to add, edit and delete information from a database}
-		On the welcome page, accessible once the user has logged in, there are several bootstrap forms. The user can add items to the table on the index page, they can edit items in the table, or they can remove items in the table.
+		On the welcome page, accessible once the user has logged in, there are several bootstrap forms. The user can add items to the table on the index page, they can edit items in the table, or they can remove items in the table. An sql insert statement is used to add items to the database, and an sql update statement is used to edit data. A delete statement is used to remove data from the database.
 
 		\subsection{Appropriate consideration of security measures}
-		On the login and welcome page, all data is sent via the post method, so that no data can be seen in the url. Whenever data is sent, a function is used to make sure the data will not cause any cross-side scripting. The function trims the data of any spaces at the front and end, and then it removes any slashes so that there is no danger that the data entered could be a link. Finally the data converts all html special characters into strings so that no user could enter a script tag.
+		On the login and welcome page, all data is sent via the post method, so that no data can be seen in the url. Whenever data is sent, a function is used to make sure the data will not cause any cross-side scripting. The function trims the data of any spaces at the front and end, and then it removes any slashes so that there is no danger that the data entered could be a link. Finally the data converts all html special characters into strings so that no user could enter a script tag. The website also stores the username in a session, so that the data is not stored on the users computer and so is not vulnerable.
 
 	\clearpage
 
@@ -154,12 +157,12 @@
 		Web applications can suffer many risks if not considered in the development process. The Open Web Application Security Project releases the OWASP top ten, a consensus about the most critical security risks to web applications. Some of these include SQL injection, cross side scripting, and sensitive data exposure. All of which the Linlithgow website will be vulnerable to unless considered during development. As the website uses forms to connect to an sql database, the website is vulnerable to cross side scripting and sql injections. Because the website also uses an sql database, it is vulnerable to sensitive data exposure. The linlithgow wesbite does not hash passwords before sending them to the database. This is a large security risk as the passwords are stored in plain text in the database, meaning that if the database was compromised, then all accounts would immediatly also be compromised. This was not an oversight, as because the website was never intended to be released commercially, the need to protect users accounts was not needed. Also, because the website does not use https, any data sent to the server is at risk, and so modern browsers will warn the user that the connection is insecure. Another reason behind not hashing passwords that was considered, is that the admin account can only edit the "places of interest" database, and so all that is effected is the index page. There is no major damadge that can be done. The linlithgow website does also not use sql prepared statements, for the samre reasons as stated before.
 
 		\subsection{Mitigations}
-		During the development of the website, several mitigations were put in place to make the website more secure. Cross side scripting and sql injections are prevented as any input from the user is passed to a function that will strip the spaces, slashes, and html characters. This minimises the risk from the affore mentioned threats.
+		During the development of the website, several mitigations were put in place to make the website more secure. Cross side scripting and sql injections are prevented as any input from the user is passed to a function that will strip the spaces, slashes, and html characters. This minimises the risk from the affore mentioned threats. By storing the users username in a session, an attacker cannot retreive it from the users computer, as it is not stored locally.
 
 	\clearpage
 
 	\section{Future Work}
-	The linlithgow website as it stands can still undergo a lot of work. The primary concern is the lack of security in certain areas of the website. Even although, as stated earlier, there were decisions made to overlook password hashing and sql prepared statements, these would be immplimented in future releases of the website, to ensure maximum security for the user. Following the securing of the web application, some additional user features would be added. Currently, when the user logs in, they cannot do anything different on the website that they could do as a guest. A future implimentation would be to allow the user to chose their favourite item from the "places of interest" database, and the website would remember this choice, by adding it to a field in the user database. 
+	The linlithgow website as it stands can still undergo a lot of work. The primary concern is the lack of security in certain areas of the website. Even although, as stated earlier, there were decisions made to overlook password hashing and sql prepared statements, these would be immplimented in future releases of the website, to ensure maximum security for the user. Following the securing of the web application, some additional user features would be added. Currently, when the user logs in, they cannot do anything different on the website that they could do as a guest. A future implimentation would be to allow the user to chose their favourite item from the "places of interest" database, and the website would remember this choice, by adding it to a field in the user database. The design of the website would also be changed so that it is more suitable for mobile devices. The images at the top of most pages could be dynamically resized based on the viewport. Cookies could also be made user of better, by implimenting a "dark mode" for the website. There would be an option for the user to switch to dark mode, and the users choice would be saved within a cookie. The darkmode would also help mobile devices, as a lot of modern mobile devices use OLED screens, and so dark modes can help with battery life.
 
 	\clearpage
 

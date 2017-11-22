@@ -98,12 +98,10 @@
     </div>
 
 
-
 		<div class="container-fluid">
 			<h1 class="text-center" id="H1">Linlithgow</h1>
 			<center><img src="Images/Linlithgow-Palace.jpg" class="img-circle" alt="Linlithgow Palace" width="512px"></center>
 		</div>
-
 
 		<div class="row">
 			<div class="col-sm-3"></div>
