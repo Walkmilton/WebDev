@@ -34,9 +34,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2}Use of Bootstrap}{6}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Use of Javascript to manipulate the DOM based on an event}{6}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.3}Use of JavaScript to manipulate the DOM based on an event}{6}{subsection.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Javascript loading dynamically changing information}{6}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.4}JavaScript loading dynamically changing information}{6}{subsection.4.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5}Use of jQuery in conjunction with the DOM}{7}{subsection.4.5}
 \defcounter {refsection}{0}\relax 
